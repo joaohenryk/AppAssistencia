@@ -1,0 +1,83 @@
+
+.marca-item {
+  margin-bottom: 16px;
+}
+
+.marca-list {
+  --ion-item-background: transparent;
+  padding: 0;
+}
+
+
+.table-header {
+  background-color: #d0f0c0; 
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.table-row {
+  background-color: #ffffff;
+  color: #222;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  width: 100%; 
+}
+
+ion-row.ion-text-center.table-row {
+  padding: 5px;
+}
+
+ion-card-title.ion-inherit-color {
+  text-align: center;
+}
+
+.card-content {
+  -webkit-padding-start: 20px;
+  padding-inline-start: 20px;
+  -webkit-padding-end: 20px;
+  padding-inline-end: 20px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  
+  line-height: 1.4;
+}
+
+
+@media (max-width: 768px) {
+  .table-header {
+    font-size: 14px; 
+  }
+
+  .table-row {
+    font-size: 12px; 
+  }
+
+  ion-col {
+    padding: 0px;
+    font-size: medium;
+    font-weight: bold;
+  }
+ 
+
+  .search-bar {
+    --padding-start: 12px;
+  }
+
+  .search-icon {
+    font-size: 18px;
+  }
+
+  .custom-input {
+    font-size: 12px;
+    padding-left: 8px;
+  }
+}

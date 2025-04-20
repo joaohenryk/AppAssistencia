@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastro de Tela</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="adicionarTela()">
+    <!-- Marca -->
+    <ion-item>
+      <ion-label position="floating">Marca</ion-label>
+      <ion-input [(ngModel)]="tela.marca" name="marca" required></ion-input>
+    </ion-item>
+
+    <!-- Modelo -->
+    <ion-item>
+      <ion-label position="floating">Modelo</ion-label>
+      <ion-input [(ngModel)]="tela.modelo" name="modelo" required></ion-input>
+    </ion-item>
+
+    <!-- Compra -->
+    <ion-item>
+      <ion-label position="floating">Compra</ion-label>
+      <ion-input [(ngModel)]="tela.compra" name="compra" type="number" required></ion-input>
+    </ion-item>
+
+    <!-- Venda -->
+    <ion-item>
+      <ion-label position="floating">Venda</ion-label>
+      <ion-input [(ngModel)]="tela.venda" name="venda" type="number" required></ion-input>
+    </ion-item>
+
+    <!-- Aro (Agora usando ion-radio-group) -->
+    <ion-item>
+      <ion-label>Tipo</ion-label>
+      <ion-radio-group [(ngModel)]="tela.aro" name="aro" required>
+        <ion-item>
+          <ion-label>Com Aro</ion-label>
+          <ion-radio slot="start" value="Com Aro"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Sem Aro</ion-label>
+          <ion-radio slot="start" value="Sem Aro"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Não se aplica</ion-label>
+          <ion-radio slot="start" value="Não se aplica"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-item>
+
+    <!-- Botão de salvar -->
+    <ion-button expand="full" type="submit">Salvar</ion-button>
+  </form>
+</ion-content>

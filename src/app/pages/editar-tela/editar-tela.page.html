@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/telas"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Tela</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="editarTela()">
+    <ion-item>
+      <ion-label position="floating">Marca</ion-label>
+      <ion-input [(ngModel)]="tela.marca" name="marca" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Modelo</ion-label>
+      <ion-input [(ngModel)]="tela.modelo" name="modelo" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Valor de Compra</ion-label>
+      <ion-input type="number" [(ngModel)]="tela.compra" name="compra"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Valor de Venda</ion-label>
+      <ion-input type="number" [(ngModel)]="tela.venda" name="venda"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Tipo da Tela</ion-label>
+      <ion-radio-group [(ngModel)]="tela.aro">
+        <ion-item>
+          <ion-label>Com Aro</ion-label>
+          <ion-radio value="Com Aro"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Sem Aro</ion-label>
+          <ion-radio value="Sem Aro"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Não se aplica</ion-label>
+          <ion-radio value="Não se aplica"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-item>
+
+    <ion-button expand="block" type="submit">Salvar</ion-button>
+    <ion-button expand="block" color="danger" (click)="excluirTela()">Excluir</ion-button>
+  </form>
+</ion-content>

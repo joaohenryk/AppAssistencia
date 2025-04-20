@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar class="header-bar" color="green">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Telas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button type="button" [routerLink]="['/cadastro-tela']">
+        <ion-icon name="add-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item class="search-bar" lines="none">
+    <ion-icon name="search-outline" slot="start" class="search-icon"></ion-icon>
+    <ion-input
+      [(ngModel)]="filtro"
+      (ionInput)="atualizarFiltro()"
+      placeholder="Buscar por marca ou modelo"
+      class="custom-input">
+    </ion-input>
+  </ion-item>
+
+  <ion-grid class="custom-table">
+
+    <ion-row *ngFor="let marca of (telasPorMarca | keyvalue)" class="marca-row">
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ marca.key | titlecase }}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-grid>
+              <ion-row class="ion-text-center table-header">
+                <ion-col><strong>Modelo</strong></ion-col>
+                <ion-col><strong>Compra</strong></ion-col>
+                <ion-col><strong>Venda</strong></ion-col>
+                <ion-col><strong>Tipo</strong></ion-col> <!-- Coluna Tipo -->
+                <ion-col></ion-col>
+              </ion-row>
+
+              <ion-row *ngFor="let tela of marca.value" class="ion-text-center table-row">
+                <ion-col>{{ tela.modelo }}</ion-col>
+                <ion-col>R${{ tela.compra }}</ion-col>
+                <ion-col>R${{ tela.venda }}</ion-col>
+                <ion-col>{{ tela.aro }}</ion-col> <!-- Exibe o valor do Tipo de Tela -->
+                <ion-col>
+                  <ion-button fill="clear" color="primary" (click)="editarTela(tela)">
+                    <ion-icon name="pencil-outline" slot="icon-only"></ion-icon>
+                  </ion-button>                  
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

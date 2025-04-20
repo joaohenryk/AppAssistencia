@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Adicionar Tela</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="fecharModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding custom-form">
+  <form (ngSubmit)="adicionarTela()">
+    <ion-item class="form-item">
+      <ion-label position="floating">Marca</ion-label>
+      <ion-input [(ngModel)]="novaTela.marca" name="marca" required></ion-input>
+    </ion-item>
+
+    <ion-item class="form-item">
+      <ion-label position="floating">Modelo</ion-label>
+      <ion-input [(ngModel)]="novaTela.modelo" name="modelo" required></ion-input>
+    </ion-item>
+
+    <ion-item class="form-item">
+      <ion-label position="floating">Valor de Compra</ion-label>
+      <ion-input type="number" inputmode="decimal" [(ngModel)]="novaTela.compra" name="compra" required></ion-input>
+    </ion-item>
+
+    <ion-item class="form-item">
+      <ion-label position="floating">Valor de Venda</ion-label>
+      <ion-input type="number" inputmode="decimal" [(ngModel)]="novaTela.venda" name="venda" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" class="submit-button">Salvar</ion-button>
+  </form>
+</ion-content>
