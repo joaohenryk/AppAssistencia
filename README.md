@@ -78,11 +78,3 @@ Melhorar validações de formulários
 > Subirei em breve
 
 
----
-
-📄 Licença
-
-Este projeto está sob a licença MIT — fique à vontade para usar como base ou contribuir.
-
-
----
