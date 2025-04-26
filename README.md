@@ -1,4 +1,4 @@
-# 📲 Tabela de Telas
+# 📲 App Assistência Técnica
 
 Esse é um projeto que criei usando **Ionic com Angular** e **Firebase**. A ideia é ter uma aplicação simples, mas funcional, para gerenciar modelos de telas de celulares, com valores de compra, venda e o tipo da película (com aro, sem aro ou não se aplica).
 
